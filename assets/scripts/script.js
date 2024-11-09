@@ -7,4 +7,10 @@ fetch(apiURL)                        // retrieve all data from this url
         return response.json();         // convert the relevant part of the page to a JS object
     }).then(function (object) {          // this gets called when the conversion is complete
         console.log(object);
+        displayExchangeRates(object);
 });
+
+function displayExchangeRates(object) {
+    let ratesArea = document.getElementById("rates-area");
+    ratesArea.innerText = object.conversion_rates.USD;
+}

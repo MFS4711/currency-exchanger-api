@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Bootstrap demo</title>
+    <title>Currency Exchanger</title>
 
     <!-- Bootstrap css -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -17,7 +17,29 @@
 
 <body>
 
-    <h1>Hello, world!</h1>
+    <h1>Currency Exchanger</h1>
+
+    <!-- Create an input area which allows the user to input a currency type and then click a button to get exchange rates -->
+    <!-- When this is pressed this provides a row of the 5 most common exchange rates -->
+    <!-- Then maybe an option to add the specific currency the person wants to exchange to - pair conversion api -->
+    <!-- Provide the option to enter an amount to check -->
+    <!-- Provide the time they are correct to -->
+    <!-- Give the user the option to see the historic trend of that currency - this is a paid feature -->
+    
+
+    <div class="row">
+        <div class="col-12">
+            <h3>Enter a currency:</h3>
+            <span><input type="text" id="currency-input"></span><br>
+            <button id="button">Get Exchange rates</button>
+        </div>
+    </div>
+
+    <div class="row">
+        <div id="rates-area" class="col-12">
+
+        </div>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
