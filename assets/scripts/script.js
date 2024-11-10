@@ -32,7 +32,19 @@ function displayExchangeRates(object) {
     let baseCode = object.base_code;
     let targetCode = object.target_code;
     let conversionRate = object.conversion_rate;
-    let conversionResult = object.conversion_result;
+    let conversionResult = object.conversion_result.toFixed(2);
+
+    const timeStampLast = object.time_last_update_unix;
+    const dateTimeLast = new Date(timeStampLast * 1000);
+    // console.log(timeStamp);
+    // console.log(dateTime);
+
+    const timeStampUpdate = object.time_next_update_unix;
+    const dateTimeUpdate = new Date(timeStampUpdate * 1000);
+
+    // if I wanted day of the week as below
+    // const dayOfWeek = dateTime.toLocaleDateString("en-GB", { weekday: 'long' });
+    // console.log(dayOfWeek);
 
     let requestedRates = document.getElementById("requested-rates");
 
@@ -40,7 +52,7 @@ function displayExchangeRates(object) {
         <p><strong>Requested Amount:</strong> ${requestedAmount} ${baseCode}</p>
         <p><strong>Converted Amount:</strong> ${conversionResult} ${targetCode}</p>
         <p><strong>The current exchange rate from ${baseCode} to ${targetCode} is </strong> ${conversionRate}</p>
-        <h5>Correct as of:</h5>
-        <h5>Next Update:</h5>
+        <p><strong>Correct as of:</strong> ${dateTimeLast}</p>
+        <p><small><strong>Next updated:</strong> ${dateTimeUpdate}</small></p>
         `
 }
