@@ -1,3 +1,23 @@
 body {
     text-align: center;
 }
+
+h1 {
+    margin: 20px auto;
+}
+
+label {
+    font-weight: bold;
+}
+
+input {
+    text-align: center;
+}
+
+button {
+    margin: 20px auto;
+}
+
+.requested-area {
+    border: solid black 2px;
+}
